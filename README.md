@@ -5,6 +5,9 @@ Nesse curso é ensinado como contrubuir com projetos de código aberto
 
 Link do curso [Python Pro](https://google.com.br/)
 
+[![Updates](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/shield.svg)](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/)
+[![Python 3](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/python-3-shield.svg)](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/)
+
 Para instalar:
 
 ```console
