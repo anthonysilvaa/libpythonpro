@@ -5,6 +5,18 @@ Nesse curso é ensinado como contrubuir com projetos de código aberto
 
 Link do curso [Python Pro](https://google.com.br/)
 
-Adicionando link para realizar teste [Teste](https://instagram.com.br/)
+Para instalar:
 
-Merge realizado
+```console
+python -3 -m venv .venv
+.venv/Scripts/activate
+pip install -r requirements-dev.txt
+
+```
+
+Para conferir qualidade do código:
+
+```
+flake8
+
+```
