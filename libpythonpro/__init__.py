@@ -1,1 +1,1 @@
-print('novidade')
+__version__ = '0.1'
