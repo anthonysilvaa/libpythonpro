@@ -1,4 +1,1 @@
-print('novidade')
-dsada
-olá
-sada
+__version__ = '0.1'
