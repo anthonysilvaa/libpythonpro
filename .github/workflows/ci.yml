@@ -1,60 +1,43 @@
-name: CI
 
-on:
+name: Test
 
-
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-
+on: [ push ]
 
 jobs:
-
-
-  build:
-  
-  
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-
-
     steps:
-    
-    
-      - uses: actions/checkout@v3
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: actions/checkout@v2
       - name: Setup Python
         uses: actions/setup-python@v1
-        
-        
         with:
-        
-        
           python-version: 3.9
           architecture: x64
-          cache: 'pip'
-          
-          
-      - name: Copiar Configurações .env
-        run: |
-          cp contrib/env-sample .env
-          
-          
       - name: Instalar dependências
         run: |
           pip install -r requirements-dev.txt
-          
-          
       - name: Rodar flake8
+        uses: py-actions/flake8@v1
         run: |
           pipenv run flake8 .
-        uses: py-actions/flake8@v1
         with:
           checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
-          
-          
       - name: Rodar Testes Automáticos
         run: |
-          pytest --cov=pypro
-
+          pytest libpythonpro --cov=libpythonpro
+      - name: Relatório Coverage
+        env:
+          CODECOV_TOKEN: "TOKEN_CODECOV"
+        run: |
+          codecov
