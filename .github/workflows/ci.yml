@@ -29,5 +29,4 @@ jobs:
 
       - name: Test with Pytest
         run: pytest
-  script:
-    - flake8
+  script: flake8
