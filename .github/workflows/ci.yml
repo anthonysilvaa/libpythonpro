@@ -27,8 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      script:
-        - flake8
-
       - name: Test with Pytest
         run: pytest
+  script:
+    - flake8
