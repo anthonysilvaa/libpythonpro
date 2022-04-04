@@ -30,5 +30,3 @@ jobs:
 
       - name: Rodar Flake8
         run: flake8
-
-
