@@ -28,4 +28,7 @@ jobs:
       - name: Test with pytest
         run: pytest
 
+      - name: Rodar Flake8
+        run: flake8
+
 
