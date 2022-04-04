@@ -27,6 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      script:
-        - flake8
-        - pipenv run pytest --cov=pypro
+      - name: Rodar flake8
+        uses: py-actions/flake8@v1
+        with:
+          checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
+
+      - name: Test with Pytest
+        run: pytest
+
