@@ -29,6 +29,6 @@ jobs:
         run: pytest
 
       - name: Rodar Flake8
-        run: flake8
+        run: flake8 .
 
 
