@@ -10,9 +10,7 @@ on:
 
 jobs:
   build:
-    env:
-      PIPENV_NO_INHERIT: 1
-      PIPENV_IGNORE_VIRTUALENVS: 1
+
     runs-on: ubuntu-latest
 
     steps:
@@ -27,11 +25,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-      - name: Rodar flake8
-        uses: py-actions/flake8@v1
-        with:
-          checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
-
-      - name: Test with Pytest
-        run: pytest
+      - name: Test with pytest
+        run: pytest libpythonpro
 
