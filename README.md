@@ -7,9 +7,9 @@ Link do curso [Python Pro](https://google.com.br/)
 
 [![Updates](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/shield.svg)](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/)
 [![Python 3](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/python-3-shield.svg)](https://pyup.io/repos/github/anthonysilvaa/libpythonpro/)
-[![codecov](https://codecov.io/gh/Hysing-Fundation/libpythonpro/branch/master/graph/badge.svg?token=HXJ98D6FIE)](https://codecov.io/gh/Hysing- Fundação/libpythonpro)
+[![codecov](https://codecov.io/gh/Hysing-Fundation/libpythonpro/branch/master/graph/badge.svg?token=HXJ98D6FIE)](https://codecov.io/gh/Hysing-Fundation/libpythonpro)
 
-Para instalar:
+Para Instalar:
 
 ```console
 python -3 -m venv .venv
@@ -17,6 +17,7 @@ python -3 -m venv .venv
 pip install -r requirements-dev.txt
 
 ```
+
 
 Para conferir qualidade do código:
 
