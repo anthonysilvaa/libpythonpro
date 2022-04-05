@@ -30,6 +30,3 @@ jobs:
 
       - name: Rodar Flake8
         run: flake8
-
-        after_success:
-          - codecov
