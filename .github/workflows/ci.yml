@@ -1,35 +1,32 @@
+name: Python application
 
-name: Test
-
-on: [ push ]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
-
   build:
 
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Python
+      - name: Set up Python 3.9
         uses: actions/setup-python@v1
         with:
           python-version: 3.9
-          architecture: x64
-      - name: Instalar dependências
+
+      - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
-      - name: Rodar flake8
-        uses: py-actions/flake8@v1
-        run: |
-          pipenv run flake8 .
-        with:
-          checkName: 'flake8_py3'   # NOTE: this needs to be the same as the job name
-      - name: Rodar Testes Automáticos
-        run: |
-          pytest libpythonpro --cov=libpythonpro
-      - name: Relatório Coverage
-        env:
-          CODECOV_TOKEN: "TOKEN_CODECOV"
-        run: |
-          codecov
+
+      - name: Test with pytest
+        run: pytest libpythonpro
+
+      - name: Rodar Flake8
+        run: flake8
