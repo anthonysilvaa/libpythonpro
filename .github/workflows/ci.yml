@@ -32,5 +32,7 @@ jobs:
       - name: Rodar Flake8
         run: flake8
 
-        after_success:
-          - codecov
+      - name: Cobertura de testes com codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
