@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - 18
   pull_request:
     branches:
       - master
@@ -25,8 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt codecov
 
-      - name: Test with pytest and coverage
+      - name: Test with pytest
         run: pytest libpythonpro --cov=libpythonpro
 
       - name: Rodar Flake8
         run: flake8
+
+      - name: Cobertura de testes com codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+
