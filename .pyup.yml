@@ -2,4 +2,10 @@
 # see https://pyup.io/docs/configuration/ for all available options
 
 schedule: ''
-update: false 
+update: insecure
+
+requirements:
+  - Pipfile
+  - Pipfile.lock
+  -
+
