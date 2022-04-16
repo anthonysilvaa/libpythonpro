@@ -43,7 +43,7 @@ def test_parametros_de_spam(sessao):
     )
     enviador.enviar.assert_called_once_with(
         "anthony@python.pro.br",
-        "luciano@python.pro.br",
+        "anthony@python.pro.br",
         "Curso Python Pro",
         "Confira os módulos fantásticos"
     )
