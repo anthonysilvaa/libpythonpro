@@ -1,9 +1,9 @@
 from time import sleep
 
-class Sessao:
 
-    contador=0
-    usuarios=[]
+class Sessao:
+    contador = 0
+    usuarios = []
 
     def salvar(self, usuario):
         Sessao.contador += 1
@@ -14,7 +14,7 @@ class Sessao:
         return self.usuarios
 
     def roll_back(self):
-        self.usuarios.clear() #clear remove todos os elementos de uma lista
+        self.usuarios.clear()  # clear remove todos os elementos de uma lista
 
     def fechar(self):
         pass
