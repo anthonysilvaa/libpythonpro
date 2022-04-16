@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - master
+      - 18
   pull_request:
     branches:
       - master
+
 
 jobs:
   build:
