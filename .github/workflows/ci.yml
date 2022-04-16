@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - 18
   pull_request:
     branches:
       - master
@@ -30,3 +31,4 @@ jobs:
 
       - name: Rodar Flake8
         run: flake8
+        
