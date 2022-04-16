@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - 18
+      - trabalho_continuo
   pull_request:
     branches:
       - master
