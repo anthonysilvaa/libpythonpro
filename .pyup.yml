@@ -3,3 +3,8 @@
 
 schedule: ''
 update: insecure
+
+requirements:
+  - Pipfile
+  - Pipfile.lock
+
