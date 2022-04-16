@@ -26,6 +26,7 @@ jobs:
           pip install -q pipenv codecov
           pipenv sync --dev
 
+
       - name: Test with pytest and coverage
         run: pytest libpythonpro --cov=libpythonpro
 
